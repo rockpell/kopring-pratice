@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    include:
+      - domain
+
+  mvc:
+    log-request-details: true
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  web:
+    resources:
+      add-mappings: false
+
+  application:
+    name: rockpell-server
