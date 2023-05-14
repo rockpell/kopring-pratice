@@ -1,6 +1,6 @@
-package com.rockpell.api.adatper.`in`
+package com.rockpell.user_api.adatper.`in`
 
-import com.rockpell.api.application.port.`in`.GetAllOrderUseCase
+import com.rockpell.user_api.application.port.`in`.GetAllOrderUseCase
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

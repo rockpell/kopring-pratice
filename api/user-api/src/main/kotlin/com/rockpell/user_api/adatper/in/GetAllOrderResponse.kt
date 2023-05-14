@@ -1,4 +1,4 @@
-package com.rockpell.api.adatper.`in`
+package com.rockpell.user_api.adatper.`in`
 
 import com.rockpell.domain.domain.order.Order
 import com.rockpell.domain.domain.order.OrderStatus
