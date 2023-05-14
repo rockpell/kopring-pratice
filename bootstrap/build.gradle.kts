@@ -35,7 +35,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     implementation(project(":domain"))
-    implementation(project(":api"))
+    implementation(project(":api:user-api"))
 
 //    runtimeOnly("com.mysql:mysql-connector-j")
     runtimeOnly("mysql:mysql-connector-java")

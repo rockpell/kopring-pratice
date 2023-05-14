@@ -1,4 +1,4 @@
 rootProject.name = "kopring"
 include("bootstrap")
 include("domain")
-include("api")
+include(":api:user-api")
