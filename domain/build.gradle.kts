@@ -9,9 +9,9 @@ plugins {
 dependencies {
     api("org.springframework.boot:spring-boot-starter-data-jpa")
 
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:${rootProject.ext.get("mockitoKotlinVersion")}")
+    testImplementation("org.assertj:assertj-core")
     testRuntimeOnly("com.h2database:h2")
 }
 
