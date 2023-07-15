@@ -1,20 +1,17 @@
 package com.rockpell.user_api.adatper.`in`
 
-import com.rockpell.domain.domain.order.Order
-import com.rockpell.domain.domain.order.OrderStatus
-import java.time.LocalDateTime
+import com.rockpell.domain.domain.member.Member
 
-class GetAllOrderResponse(
-    val orders: List<GetAllOrderDto>
+class GetAllMemberResponse(
+    val members: List<GetAllMemberDto>
 )
 
-class GetAllOrderDto(
+class GetAllMemberDto(
     val id: Long,
-    val orderDate: LocalDateTime,
-    val orderStatus: OrderStatus
+    val name: String,
 )
 
-fun List<Order>.toResponse(): GetAllOrderResponse {
-    val orders = this.map { GetAllOrderDto(id = it.id, orderDate = it.orderDate, orderStatus = it.status) }
-    return GetAllOrderResponse(orders)
+fun List<Member>.toResponse(): GetAllMemberResponse {
+    val orders = this.map { GetAllMemberDto(id = it.id, name = it.name) }
+    return GetAllMemberResponse(orders)
 }
