@@ -1,20 +1,41 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     base
+    id("org.springframework.boot") version "2.6.4" apply false
+    id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
     kotlin("jvm") version "1.5.21" apply false
+    kotlin("plugin.spring") version "1.5.21" apply false
+    kotlin("plugin.jpa") version "1.5.21" apply false
 }
 
 allprojects {
     group = "com.rockpell"
     version = "1.0-SNAPSHOT"
+}
+
+ext {
+    set("springCloudVersion", "2021.0.1")
+    set("mockitoKotlinVersion", "4.0.0")
+}
+
+subprojects {
     repositories {
         mavenCentral()
         maven { url = uri("https://repo.spring.io/milestone") }
         maven { url = uri("https://repo.spring.io/snapshot") }
+        maven { url = uri("https://jitpack.io") }
     }
-}
 
-dependencies {
-    subprojects.forEach {
-        archives(it)
+    tasks.withType<Test> {
+        systemProperty("spring.profiles.active", "test")
+        useJUnitPlatform()
+    }
+
+    tasks.withType<KotlinCompile> {
+        kotlinOptions {
+            freeCompilerArgs = listOf("-Xjsr305=strict")
+            jvmTarget = "11"
+        }
     }
 }
