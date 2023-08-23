@@ -9,5 +9,4 @@ class BootstrapApplicationTest {
     @Test
     fun contextLoads() {
     }
-
 }

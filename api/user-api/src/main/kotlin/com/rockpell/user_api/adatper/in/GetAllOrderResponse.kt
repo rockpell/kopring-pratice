@@ -8,7 +8,7 @@ class GetAllMemberResponse(
 
 class GetAllMemberDto(
     val id: Long,
-    val name: String,
+    val name: String
 )
 
 fun List<Member>.toResponse(): GetAllMemberResponse {

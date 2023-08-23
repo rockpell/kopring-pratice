@@ -11,4 +11,4 @@ data class Address(
     val street: String,
     @Column(name = "zipcode", nullable = false, length = 8)
     val zipcode: String
-) {}
+)
