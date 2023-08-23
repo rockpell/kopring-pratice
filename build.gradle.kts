@@ -4,6 +4,9 @@ plugins {
     base
     id("org.springframework.boot") version "2.6.4" apply false
     id("io.spring.dependency-management") version "1.0.11.RELEASE" apply false
+    id("org.jlleitschuh.gradle.ktlint") version "11.5.0"
+    id("org.jlleitschuh.gradle.ktlint-idea") version "11.5.0"
+
     kotlin("jvm") version "1.5.21" apply false
     kotlin("plugin.spring") version "1.5.21" apply false
     kotlin("plugin.jpa") version "1.5.21" apply false
@@ -19,13 +22,22 @@ ext {
     set("mockitoKotlinVersion", "4.0.0")
 }
 
-subprojects {
+allprojects {
     repositories {
         mavenCentral()
         maven { url = uri("https://repo.spring.io/milestone") }
         maven { url = uri("https://repo.spring.io/snapshot") }
         maven { url = uri("https://jitpack.io") }
     }
+}
+
+subprojects {
+//    repositories {
+//        mavenCentral()
+//        maven { url = uri("https://repo.spring.io/milestone") }
+//        maven { url = uri("https://repo.spring.io/snapshot") }
+//        maven { url = uri("https://jitpack.io") }
+//    }
 
     tasks.withType<Test> {
         systemProperty("spring.profiles.active", "test")
