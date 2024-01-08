@@ -8,6 +8,10 @@ plugins {
     kotlin("plugin.jpa")
 }
 
+tasks.bootJar {
+    enabled = false
+}
+
 dependencies {
     api("org.springframework.boot:spring-boot-starter-data-jpa")
 
