@@ -32,13 +32,6 @@ allprojects {
 }
 
 subprojects {
-//    repositories {
-//        mavenCentral()
-//        maven { url = uri("https://repo.spring.io/milestone") }
-//        maven { url = uri("https://repo.spring.io/snapshot") }
-//        maven { url = uri("https://jitpack.io") }
-//    }
-
     tasks.withType<Test> {
         systemProperty("spring.profiles.active", "test")
         useJUnitPlatform()
