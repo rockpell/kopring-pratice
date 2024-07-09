@@ -5,13 +5,13 @@ import com.rockpell.domain.domain.order.OrderStatus
 import java.time.LocalDateTime
 
 class GetAllOrderResponse(
-    val orders: List<GetAllOrderDto>
+    val orders: List<GetAllOrderDto>,
 )
 
 class GetAllOrderDto(
     val id: Long,
     val orderDate: LocalDateTime,
-    val orderStatus: OrderStatus
+    val orderStatus: OrderStatus,
 )
 
 fun List<Order>.toResponse(): GetAllOrderResponse {

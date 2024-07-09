@@ -15,7 +15,7 @@ import javax.persistence.Table
 class Order(
 //    member: Member,
     status: OrderStatus = OrderStatus.ORDER,
-    orderDate: LocalDateTime = LocalDateTime.now()
+    orderDate: LocalDateTime = LocalDateTime.now(),
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 
 @Service("AdminGetAllOrderService")
 internal class GetAllOrderService(
-    private val orderRepository: OrderRepository
+    private val orderRepository: OrderRepository,
 ) : GetAllOrderUseCase {
     override fun getAll(): List<Order> {
         return orderRepository.findAll()

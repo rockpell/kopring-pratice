@@ -14,9 +14,8 @@ import javax.persistence.Table
 @Entity
 @Table(name = "category")
 class Category(
-    name: String
+    name: String,
 ) {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)

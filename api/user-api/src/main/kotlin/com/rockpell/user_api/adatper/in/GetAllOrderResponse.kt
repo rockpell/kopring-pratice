@@ -3,12 +3,12 @@ package com.rockpell.user_api.adatper.`in`
 import com.rockpell.domain.domain.member.Member
 
 class GetAllMemberResponse(
-    val members: List<GetAllMemberDto>
+    val members: List<GetAllMemberDto>,
 )
 
 class GetAllMemberDto(
     val id: Long,
-    val name: String
+    val name: String,
 )
 
 fun List<Member>.toResponse(): GetAllMemberResponse {

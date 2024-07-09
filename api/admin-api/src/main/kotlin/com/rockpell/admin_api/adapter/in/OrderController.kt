@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/order")
 class OrderController(
-    private val getAllOrderUseCase: GetAllOrderUseCase
+    private val getAllOrderUseCase: GetAllOrderUseCase,
 ) {
     @GetMapping("")
     fun getAll(): GetAllOrderResponse {

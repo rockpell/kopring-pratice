@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 
 @Service
 internal class GetAllMemberService(
-    private val memberRepository: MemberRepository
+    private val memberRepository: MemberRepository,
 ) : GetAllMemberUseCase {
     override fun getAll(): List<Member> {
         return memberRepository.findAll()

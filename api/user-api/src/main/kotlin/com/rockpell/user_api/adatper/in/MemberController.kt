@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("/member")
 class MemberController(
-    private val getAllMemberUseCase: GetAllMemberUseCase
+    private val getAllMemberUseCase: GetAllMemberUseCase,
 ) {
     @GetMapping("")
     fun getAll(): GetAllMemberResponse {
