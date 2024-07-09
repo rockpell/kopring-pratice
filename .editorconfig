@@ -15,23 +15,14 @@ insert_final_newline = true
 indent_size = 4
 
 [*.{kt,kts}]
-ktlint_disabled_rules = package-name
+ij_kotlin_allow_trailing_comma_on_call_site = true
+ij_kotlin_allow_trailing_comma = true
 
-ktlint_code_style = ktlint_official
-ktlint_ignore_back_ticked_identifier = true
-
-ktlint_standard = enabled
-
-# Experimental rules run by default run on the ktlint code base itself. Experimental rules should not be released if
-# we are not pleased ourselves with the results on the ktlint code base.
-ktlint_experimental = enabled
-
-# Don't allow any wildcard imports
-ij_kotlin_packages_to_use_import_on_demand = unset
-
-# Prevent wildcard imports
-ij_kotlin_name_count_to_use_star_import = 99
-ij_kotlin_name_count_to_use_star_import_for_members = 99
+ktlint_experimental = disabled
+ktlint_standard_no-wildcard-imports = disabled
+ktlint_standard_package-name = disabled
+ktlint_standard_string-template-indent = disabled
+ktlint_standard_multiline-expression-wrapping = disabled
 
 [*.md]
 trim_trailing_whitespace = false
